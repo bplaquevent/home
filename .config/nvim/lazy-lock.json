@@ -1,7 +1,11 @@
 {
+  "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
+  "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
+  "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
+  "cmp-path": { "branch": "main", "commit": "c6635aae33a50d6010bf1aa756ac2398a2d54c32" },
+  "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
-  "ncm2": { "branch": "master", "commit": "24d77cd5206438a6670ff1cf8d1628532910e14e" },
-  "ncm2-phpactor": { "branch": "master", "commit": "52d32e6b7f272c376031159819b9eb19545c642e" },
-  "nvim-lspconfig": { "branch": "master", "commit": "4692f3a14f05bbc1f75e887c838c81c07f1ba91f" },
-  "nvim-yarp": { "branch": "master", "commit": "bb5f5e038bfe119d3b777845a76b0b919b35ebc8" }
+  "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
+  "nvim-lspconfig": { "branch": "master", "commit": "bd1d0247b330fe7add76cd368a5092ac1f212dd2" },
+  "vim-vsnip": { "branch": "master", "commit": "0a4b8419e44f47c57eec4c90df17567ad4b1b36e" }
 }
