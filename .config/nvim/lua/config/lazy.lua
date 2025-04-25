@@ -33,3 +33,6 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+
+-- Map <C-e> to open the diagnostic floating window
+vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>lua vim.diagnostic.open_float({ border="single" })<CR>', { noremap = true, silent = true })
