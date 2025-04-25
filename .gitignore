@@ -1,7 +1,10 @@
 /*
+!/.config
+/.config/*
 !/.config/nvim
 !/.gitignore
 !/.muttrc
 !/.tmux.conf
 !/.vim
+!/.vimrc
 !/.zshrc

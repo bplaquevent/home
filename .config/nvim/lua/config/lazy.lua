@@ -36,3 +36,13 @@ require("lazy").setup({
 
 -- Map <C-e> to open the diagnostic floating window
 vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>lua vim.diagnostic.open_float({ border="single" })<CR>', { noremap = true, silent = true })
+
+-- Indentation in PHP files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "php",
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.expandtab = true
+  end,
+})
