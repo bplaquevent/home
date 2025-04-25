@@ -87,7 +87,7 @@ return {
         },
         completion = {
           keyword_length = 0,
-	  autocomplete = false,
+ 	      autocomplete = false,
           completeopt = 'menu,menuone,noinsert,preview,longest',
         },
         experimental = {
