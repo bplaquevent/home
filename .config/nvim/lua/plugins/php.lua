@@ -17,7 +17,7 @@ return {
       local cmp_nvim_lsp = require('cmp_nvim_lsp')
       lspconfig.phpactor.setup{
         capabilities = cmp_nvim_lsp.default_capabilities(),
-	cmd = { 'phpactor', 'language-server', '-vvv' },
+        cmd = { 'phpactor', 'language-server', '-vvv' },
         init_options = {
           ['language_server_phpstan.enabled'] = false,
           ['language_server_psalm.enabled'] = false,
@@ -84,7 +84,7 @@ return {
         },
         completion = {
           keyword_length = 0,
- 	      autocomplete = false,
+          autocomplete = false,
           completeopt = 'menu,menuone,noinsert,preview,longest',
         },
         experimental = {
