@@ -40,6 +40,8 @@ vim.api.nvim_set_keymap('n', '<C-t>', '<cmd>tabnew<CR>', { noremap = true, silen
 vim.api.nvim_set_keymap('n', '<C-d>', '<cmd>tabclose<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-Left>', '<cmd>tabprevious<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-Right>', '<cmd>tabnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-Left>', '<cmd>Neotree toggle current show filesystem left reveal_force_cwd<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<M-Right>', '<cmd>Neotree toggle current show buffers right<CR>', { noremap = true, silent = true })
 
 -- Indentation in PHP files
 vim.api.nvim_create_autocmd("FileType", {
