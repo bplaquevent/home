@@ -35,13 +35,13 @@ require("lazy").setup({
 })
 
 -- Map <C-e> to open the diagnostic floating window
-vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>lua vim.diagnostic.open_float({ border="single" })<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-t>', '<cmd>tabnew<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-d>', '<cmd>tabclose<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-Left>', '<cmd>tabprevious<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-Right>', '<cmd>tabnext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-Left>', '<cmd>Neotree toggle current show filesystem left reveal_force_cwd<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<M-Right>', '<cmd>Neotree toggle current show buffers right<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-e>', ':lua vim.diagnostic.open_float({ border="single" })<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-t>', ':tabnew<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-d>', ':tabclose<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Left>', ':tabprevious<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-Right>', ':tabnext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-Left>', ':Neotree toggle current show filesystem left reveal_force_cwd focus<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-Right>', ':Neotree toggle current show buffers right focus<CR>', { noremap = true, silent = true })
 
 -- Indentation in PHP files
 vim.api.nvim_create_autocmd("FileType", {

@@ -19,8 +19,9 @@ return {
         capabilities = cmp_nvim_lsp.default_capabilities(),
         cmd = { 'phpactor', 'language-server', '-vvv' },
         init_options = {
-          ['language_server_phpstan.enabled'] = false,
-          ['language_server_psalm.enabled'] = false,
+          ['language_server_phpstan.enabled'] = true,
+          ['language_server_php_cs_fixer.enabled'] = true,
+          ['symfony.enabled'] = true,
           ['composer.enable'] = true,
           ['composer.autoloader_path'] = '%project_root%/vendor/autoload.php',
           ['composer.class_maps_only'] = true,
