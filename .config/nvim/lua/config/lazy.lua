@@ -50,5 +50,8 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.shiftwidth = 4
     vim.bo.tabstop = 4
     vim.bo.expandtab = true
+    vim.opt.colorcolumn = '121'
+    vim.opt.termguicolors = true
+    vim.cmd('highlight ColorColumn guibg=NvimDarkRed')
   end,
 })
