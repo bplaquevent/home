@@ -2,6 +2,8 @@
 !/.config
 /.config/*
 !/.config/nvim
+!/.config/guake
+/.config/guake/session.json
 !/.gitignore
 !/.muttrc
 !/.tmux.conf
