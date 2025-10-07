@@ -21,6 +21,29 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+vim.opt.compatible = false
+vim.opt.fileformat = 'unix'
+vim.opt.encoding = 'utf-8'
+vim.opt.mouse = 'a'
+vim.opt.visualbell = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.number = true
+vim.opt.wrap = true
+vim.opt.showmatch = true
+vim.opt.title = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.wrapscan = true
+vim.opt.ignorecase = false
+vim.opt.showtabline = 2
+vim.opt.foldmethod = 'marker'
+vim.opt.hlsearch = true
+vim.opt.laststatus = 2
+vim.opt.swapfile = false
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
@@ -53,5 +76,69 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.colorcolumn = '121'
     vim.opt.termguicolors = true
     vim.cmd('highlight ColorColumn guibg=NvimDarkRed')
+    vim.lsp.enable('phpactor')
   end,
 })
+
+-- Indentation in LUA files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.bo.shiftwidth = 2
+    vim.bo.tabstop = 2
+    vim.bo.expandtab = true
+  end,
+})
+
+-- Fonction "Home" intelligente
+local function smart_home()
+  local line = vim.api.nvim_get_current_line()
+  local first_nonblank = line:find('%S') or 1
+  local col = vim.fn.col('.')
+
+  if col ~= first_nonblank then
+    -- Aller au premier caractère non blanc
+    vim.fn.cursor(vim.fn.line('.'), first_nonblank)
+  else
+    -- Aller tout au début de la ligne (colonne 1)
+    vim.fn.cursor(vim.fn.line('.'), 1)
+  end
+end
+
+-- Mode Insert : déplacement direct sans utiliser <C-O> (évite les bugs avec nvim-cmp)
+vim.keymap.set('i', '<Home>', function()
+  smart_home()
+end, { silent = true })
+
+-- Mode Normal et Visuel : comportement identique
+vim.keymap.set({ 'n', 'v' }, '<Home>', smart_home, { silent = true })
+
+local function trim_trailing_whitespace()
+  local bufnr = vim.api.nvim_get_current_buf()
+
+  -- Vérifie si le buffer est modifiable
+  if not vim.api.nvim_buf_get_option(bufnr, 'modifiable') then
+    return
+  end
+
+  local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+  local modified = false
+
+  for i, line in ipairs(lines) do
+    local trimmed = line:gsub('%s+$', '')
+    if trimmed ~= line then
+      lines[i] = trimmed
+      modified = true
+    end
+  end
+
+  if modified then
+    vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, lines)
+  end
+end
+
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePre' }, {
+  pattern = '*',
+  callback = trim_trailing_whitespace,
+})
+
