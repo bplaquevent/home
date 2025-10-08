@@ -20,7 +20,7 @@ set editor=vim
 set signature='~/.signature.txt'
 set sig_on_top=no
 set date_format='%c'
-set tmpdir='~/tmp'
+set tmpdir='~/.mutt/tmp'
 bind index ^ imap-fetch-mail
 color normal white default
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
