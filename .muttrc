@@ -21,6 +21,7 @@ set signature='~/.signature.txt'
 set sig_on_top=no
 set date_format='%c'
 set tmpdir='~/.mutt/tmp'
+auto_view text/html
 bind index ^ imap-fetch-mail
 color normal white default
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
