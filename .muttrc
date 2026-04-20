@@ -16,11 +16,12 @@ set header_cache='~/.mutt/cache'
 alternative_order text/plain text/enriched text/html
 set mail_check=60
 set timeout=300
-set editor=vim
+set editor=nvim
 set signature='~/.signature.txt'
 set sig_on_top=no
 set date_format='%c'
 set tmpdir='~/.mutt/tmp'
+set pager_index_lines=20
 auto_view text/html
 bind index ^ imap-fetch-mail
 color normal white default

@@ -1,0 +1,5 @@
+source .muttrc
+set sidebar_visible=true
+bind index,pager <a-up> sidebar-prev
+bind index,pager <a-down> sidebar-next
+bind index,pager <a-right> sidebar-open
