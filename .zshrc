@@ -67,7 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 if [ "$TERMINAL_EMULATOR" != 'JetBrains-JediTerm' ]
-then 
+then
     ZSH_TMUX_AUTOSTART="true"
     ZSH_TMUX_AUTOCONNECT="false"
 fi
@@ -112,3 +112,8 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim='nvim'
 alias mutt='neomutt'
+alias gemini='docker run -ti --rm -v "${HOME}:/home/kosmos" -v ".:/workspace" gemini-cli:latest'
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/benjamin.plaquevent/.local/bin:$PATH"
