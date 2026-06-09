@@ -114,11 +114,6 @@ alias vim='nvim'
 alias mutt='neomutt'
 alias gemini='docker run -ti --rm -v "${HOME}:/home/kosmos" -v ".:/workspace" gemini-cli:latest'
 
-
 # Added by Antigravity CLI installer
 export PATH="/home/benjamin.plaquevent/.local/bin:$PATH"
 
-# WSL only: unlock SSH key in the persistent systemd agent (passphrase once per boot)
-if [[ -o interactive ]] && [[ -n "${WSL_DISTRO_NAME:-}" || "$(< /proc/version)" == *[Mm]icrosoft* ]] && [ -n "${SSH_AUTH_SOCK:-}" ] && [ -f "$HOME/.ssh/id_ed25519" ]; then
-  ssh-add -l &>/dev/null || ssh-add "$HOME/.ssh/id_ed25519"
-fi
