@@ -5,11 +5,11 @@
   "cmp-path": { "branch": "main", "commit": "c642487086dbd9a93160e1679a1327be111cbc25" },
   "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
-  "neo-tree.nvim": { "branch": "main", "commit": "1b4c40051f2623d0a7dcf19d5b74b997b97b0a9a" },
+  "neo-tree.nvim": { "branch": "main", "commit": "b01ee1769144c4491ea44bc329cb84040e9793be" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-cmp": { "branch": "main", "commit": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca" },
-  "nvim-lspconfig": { "branch": "master", "commit": "bfcc0171a43f22afa61d927ffe9fcb6cb85dc99e" },
-  "nvim-web-devicons": { "branch": "master", "commit": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c" },
+  "nvim-lspconfig": { "branch": "master", "commit": "dd1c9b802c943278179a5d819369cda085b79d45" },
+  "nvim-web-devicons": { "branch": "master", "commit": "dad71387de386a946b123079d0e53f23028f3abd" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "vim-vsnip": { "branch": "master", "commit": "9bcfabea653abdcdac584283b5097c3f8760abaa" }
 }
