@@ -114,6 +114,9 @@ alias vim='nvim'
 alias mutt='neomutt'
 alias gemini='docker run -ti --rm -v "${HOME}:/home/kosmos" -v ".:/workspace" gemini-cli:latest'
 
+# Secrets
+source $HOME/.zshrc_private
+
 # Added by Antigravity CLI installer
 export PATH="/home/benjamin.plaquevent/.local/bin:$PATH"
 
