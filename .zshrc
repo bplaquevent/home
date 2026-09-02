@@ -120,3 +120,5 @@ source $HOME/.zshrc_private
 # Added by Antigravity CLI installer
 export PATH="/home/benjamin.plaquevent/.local/bin:$PATH"
 
+
+. "$HOME/.local/bin/env"
