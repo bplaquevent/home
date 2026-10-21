@@ -23,6 +23,7 @@ set date_format='%c'
 set tmpdir='~/.mutt/tmp'
 set pager_index_lines=20
 set pager_stop
+set sort=date
 auto_view text/html
 bind index ^ imap-fetch-mail
 color normal white default
